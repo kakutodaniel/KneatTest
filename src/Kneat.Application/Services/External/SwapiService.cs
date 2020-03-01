@@ -1,4 +1,5 @@
 ﻿using Kneat.Application.Contracts.External;
+using Kneat.Application.Services.External.Interfaces;
 using Kneat.Application.Settings.External;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Kneat.Application.Services.External
 {
-    public class SwapiService : BaseService
+    public class SwapiService : BaseService, ISwapiService
     {
         private readonly HttpClient _httpClient;
         private readonly ILogger<SwapiService> _logger;

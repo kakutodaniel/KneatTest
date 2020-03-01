@@ -1,4 +1,4 @@
-﻿using Kneat.Application.Services.External;
+﻿using Kneat.Application.Services.External.Interfaces;
 using Xunit;
 
 namespace Kneat.Tests.Services.External
@@ -6,11 +6,11 @@ namespace Kneat.Tests.Services.External
     public class SwapiServiceTest : IClassFixture<Fixture>
     {
 
-        private readonly SwapiService _swapiService;
+        private readonly ISwapiService _swapiService;
 
         public SwapiServiceTest(Fixture fixture)
         {
-            _swapiService = fixture.ServiceProvider.GetService(typeof(SwapiService)) as SwapiService;
+            _swapiService = fixture.ServiceProvider.GetService(typeof(ISwapiService)) as ISwapiService;
         }
 
 

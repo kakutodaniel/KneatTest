@@ -11,6 +11,8 @@ using System.Net.Http.Headers;
 using Polly;
 using Microsoft.Extensions.Logging;
 using Kneat.Application.Services;
+using Kneat.Application.Services.Interfaces;
+using Kneat.Application.Services.External.Interfaces;
 
 namespace Kneat.Application
 {
@@ -42,17 +44,16 @@ namespace Kneat.Application
             services.Configure<SwapiSettings>(config.GetSection(SwapiSettings.Section));
             services.TryAddSingleton(resolver => resolver.GetRequiredService<IOptions<SwapiSettings>>().Value);
 
-
-            //service
-            services.TryAddSingleton<SwapiService>();
-            services.TryAddSingleton<KneatService>();
+            //services
+            services.TryAddSingleton<ISwapiService, SwapiService>();
+            services.TryAddSingleton<IKneatService, KneatService>();
 
 
             //get http swapi settings
             var swapiSettings = config.GetSection(SwapiSettings.Section).Get<SwapiSettings>();
 
-            //inject http info into swapiservice class
-            services.AddHttpClient<SwapiService>(opt =>
+            //inject http info into interface class
+            services.AddHttpClient<ISwapiService, SwapiService>(opt =>
             {
                 opt.BaseAddress = new Uri(swapiSettings.BaseUrl);
                 opt.DefaultRequestHeaders.Accept.Clear();
@@ -60,10 +61,7 @@ namespace Kneat.Application
 
             }) //retry 2 times every 600 ms
             .AddTransientHttpErrorPolicy(opt => opt.WaitAndRetryAsync(2, x => TimeSpan.FromMilliseconds(600)));
-            
 
         }
-
-
     }
 }

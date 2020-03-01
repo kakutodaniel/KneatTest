@@ -1,3 +1,4 @@
+
 # Starships
 
 This project aims calculate how many stops are needed for resupply, given the distance in mega lights (MGLT)
@@ -20,6 +21,24 @@ This project aims calculate how many stops are needed for resupply, given the di
 * The files will be published in `..\src\Kneat.Worker\bin\Release\netcoreapp2.2\runtime`
 * Run exe file 
 * In case of error, after running exe file, there is a log file in logs folder that will be created. See for further details.
+
+## Configuration File
+
+* There is a file called `appsettings.dev.json` for the main project and `testsettings.json` for the test project. They have the following configuration:
+
+```json
+{
+  "SwapiSettings": {
+    "BaseUrl": "https://swapi.co/api/",
+    "StarShipsResource": "starships",
+    "ContentType": "application/json",
+    "Timeout": 10000
+  }
+```
+* BaseUrl: Base request URL
+* StarShipsResource: Resource that will be consumed
+* Timeout: Time waiting for a response
+
 
 ## Running the tests
 

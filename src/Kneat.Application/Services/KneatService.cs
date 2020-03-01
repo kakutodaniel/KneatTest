@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 using System.Linq;
 using Kneat.Application.Contracts.External;
 using Kneat.Application.Views;
+using Kneat.Application.Services.Interfaces;
+using Kneat.Application.Services.External.Interfaces;
 
 namespace Kneat.Application.Services
 {
-    public class KneatService
+    public class KneatService : IKneatService
     {
 
         private readonly List<KeyValuePair<string, int>> conversionTable =
@@ -21,13 +23,13 @@ namespace Kneat.Application.Services
             };
 
 
-        private readonly SwapiService _swapiService;
+        private readonly ISwapiService _swapiService;
         private readonly ILogger<KneatService> _logger;
         private KneatView dataResult;
 
 
         public KneatService(
-            SwapiService swapiService,
+            ISwapiService swapiService,
             ILogger<KneatService> logger)
         {
             _swapiService = swapiService;

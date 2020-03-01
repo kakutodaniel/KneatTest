@@ -1,5 +1,5 @@
 ﻿using Kneat.Application.Contracts.External;
-using Kneat.Application.Services;
+using Kneat.Application.Services.Interfaces;
 using Xunit;
 
 namespace Kneat.Tests.Services
@@ -7,11 +7,11 @@ namespace Kneat.Tests.Services
     public class KneatServiceTest : IClassFixture<Fixture>
     {
 
-        private readonly KneatService _kneatService;
+        private readonly IKneatService _kneatService;
 
         public KneatServiceTest(Fixture fixture)
         {
-            _kneatService = fixture.ServiceProvider.GetService(typeof(KneatService)) as KneatService;
+            _kneatService = fixture.ServiceProvider.GetService(typeof(IKneatService)) as IKneatService;
         }
 
         [Fact]

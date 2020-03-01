@@ -4,10 +4,10 @@ using System;
 using System.IO;
 using Kneat.Application;
 using Microsoft.Extensions.Logging;
-using Kneat.Application.Services;
 using Kneat.Application.Contracts.External;
 using System.Linq;
 using System.Text;
+using Kneat.Application.Services.Interfaces;
 
 namespace Kneat.Worker
 {
@@ -32,7 +32,7 @@ namespace Kneat.Worker
                 Console.WriteLine(Environment.NewLine);
                 Console.WriteLine("Processing...");
 
-                var service = serviceProvider.GetService<KneatService>();
+                var service = serviceProvider.GetService<IKneatService>();
 
                 long.TryParse(t, out var dist);
 
