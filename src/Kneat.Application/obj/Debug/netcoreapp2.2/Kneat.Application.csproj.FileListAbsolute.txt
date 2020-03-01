@@ -1,0 +1,9 @@
+C:\kneat-software-test\src\Kneat.Application\bin\Debug\netcoreapp2.2\Kneat.Application.deps.json
+C:\kneat-software-test\src\Kneat.Application\bin\Debug\netcoreapp2.2\Kneat.Application.dll
+C:\kneat-software-test\src\Kneat.Application\bin\Debug\netcoreapp2.2\Kneat.Application.pdb
+C:\kneat-software-test\src\Kneat.Application\obj\Debug\netcoreapp2.2\Kneat.Application.csproj.CoreCompileInputs.cache
+C:\kneat-software-test\src\Kneat.Application\obj\Debug\netcoreapp2.2\Kneat.Application.AssemblyInfoInputs.cache
+C:\kneat-software-test\src\Kneat.Application\obj\Debug\netcoreapp2.2\Kneat.Application.AssemblyInfo.cs
+C:\kneat-software-test\src\Kneat.Application\obj\Debug\netcoreapp2.2\Kneat.Application.dll
+C:\kneat-software-test\src\Kneat.Application\obj\Debug\netcoreapp2.2\Kneat.Application.pdb
+C:\kneat-software-test\src\Kneat.Application\obj\Debug\netcoreapp2.2\Kneat.Application.csprojAssemblyReference.cache
