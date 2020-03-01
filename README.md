@@ -39,6 +39,11 @@ The **testsettings.js** is in `..\src\Kneat.Tests`
 
 In case of error, after running some test, there is a log file in logs folder that will be created. See for further details.
 
+## Contributing
+
+https://swapi.co/
+
+
 ## Author
 
 Daniel Kakuto (kakutodaniel@hotmail.com)

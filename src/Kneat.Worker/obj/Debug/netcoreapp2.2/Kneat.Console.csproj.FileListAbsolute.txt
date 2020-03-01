@@ -1,3 +1,0 @@
-C:\kneat-software-test\src\Kneat.Console\obj\Debug\netcoreapp2.2\Kneat.Console.csproj.CoreCompileInputs.cache
-C:\kneat-software-test\src\Kneat.Console\obj\Debug\netcoreapp2.2\Kneat.Console.AssemblyInfoInputs.cache
-C:\kneat-software-test\src\Kneat.Console\obj\Debug\netcoreapp2.2\Kneat.Console.AssemblyInfo.cs
