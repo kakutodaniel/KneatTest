@@ -36,6 +36,7 @@ namespace Kneat.Application.Services.External
 
             try
             {
+                //_httpClient.Timeout = TimeSpan.FromMilliseconds(timeout);
                 httpResult = await _httpClient.GetAsync(resource, cts.Token);
             }
             catch (OperationCanceledException ex)
@@ -53,6 +54,7 @@ namespace Kneat.Application.Services.External
             finally
             {
                 cts = null;
+                _httpClient.Dispose();
             }
 
             if (httpResult == null)
